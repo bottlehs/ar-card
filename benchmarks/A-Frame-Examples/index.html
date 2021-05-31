@@ -1,0 +1,290 @@
+<html>
+<head>
+<title>A-Frame Examples</title>
+<link rel=stylesheet href="css/index.css"/>
+
+</head>
+<body>
+
+<div class="bigTitle">A-Frame Examples</div>
+<br/>
+
+<hr/>
+The goal of this collection is to provide a set of basic and instructive examples that introduce the various features of the <a class="toc" href="https://aframe.io/">A-Frame</a> library.
+<br/><br/>
+Examples can be viewed using a normal web browser. Some examples contain interactive virtual reality components that require a VR headset (such as the Oculus Go or Oculus Quest, which were used to test different sets of examples).
+<br/><br/>
+Source code hosted at <a class="toc" href="https://github.com/stemkoski/A-Frame-Examples">GitHub</a>.
+<hr/>
+
+<br/>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="Hello-WebVR.html">
+<img src="images/demo/Hello-WebVR.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="Hello-WebVR.html">Basic Scene</a></td></tr>
+<tr><td class="demo-text">
+	A basic scene containing a variety of colorful shapes: box, sphere, cylinder, cone, torus, and trefoil torus knot.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="image-texture-grid.html">
+<img src="images/demo/image-texture-grid.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="image-texture-grid.html">Image Textures (Grid)</a></td></tr>
+<tr><td class="demo-text">
+	The basic scene with a sky-sphere image added, and using square grid image textures on all the geometric objects.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="image-texture.html">
+<img src="images/demo/image-texture.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="image-texture.html">Image Texture</a></td></tr>
+<tr><td class="demo-text">
+	Applying image textures to geometric objects.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="environment.html">
+<img src="images/demo/environment.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="environment.html">Environment Component</a></td></tr>
+<tr><td class="demo-text">
+	Using the <a href="https://github.com/supermedium/aframe-environment-component">environment component</a> to automatically generate a background.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="extended-wasd-controls.html">
+<img src="images/demo/extended-wasd-controls.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="extended-wasd-controls.html">Extended WASD Controls</a></td></tr>
+<tr><td class="demo-text">
+	Introduces an "extended WASD controls" component for desktop (keyboard) that enables the user to: <br/> 
+	<li>move forward/left/backward/right (W/A/S/D) <br/> 
+	<li>turn left/right (Q/E) <br/> 
+	<li>fly up/down (R/F) <br/> 
+	<li>look up/down (T/G) <br/> 
+	Controls and settings are completely customizable; can be applied to camera or other entities.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="screen-controls-buttons-look.html">
+<img src="images/demo/screen-controls.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="screen-controls-buttons-look.html">Screen Controls (Buttons/Look)</a></td></tr>
+<tr><td class="demo-text">
+	Incorporating on-screen button controls for movement (optimized for touchscreen/tablet devices; also supports desktop) with the "extended WASD controls" component and the look-controls component (supports "magic screen" effect as well as desktop).
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="screen-controls-joystick-look.html">
+<img src="images/demo/screen-controls-joystick-look.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="screen-controls-joystick-look.html">Screen Controls (Joystick/Look)</a></td></tr>
+<tr><td class="demo-text">
+	Incorporating on-screen joystick controls for movement (optimized for touchscreen/tablet devices; also supports desktop) with the "extended WASD controls" component and the look-controls component (supports "magic screen" effect as well as desktop).
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="screen-controls-joystick-dual.html">
+<img src="images/demo/screen-controls-joystick-dual.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="screen-controls-joystick-dual.html">Screen Controls (Dual Joysticks)</a></td></tr>
+<tr><td class="demo-text">
+	Incorporating dual on-screen joystick controls for movement and turn/look (optimized for touchscreen/tablet devices; also supports desktop) with the "extended WASD controls" component.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="fade-in.html">
+<img src="images/demo/fade-in.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="fade-in.html">Fade-In Effect</a></td></tr>
+<tr><td class="demo-text">
+	A fade-in effect that requires the user to press a button before entering an A-Frame scene. Since audio can not be played until the user interacts with the application, this approach also enables sounds (background ambient sounds, in this example) to be activated at the same time.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="text-2D.html">
+<img src="images/demo/text-2D.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="text-2D.html">Text (2D)</a></td></tr>
+<tr><td class="demo-text">
+	Displaying text on a 2D plane with a text-area entity. 
+	Uses component with tick function to continuously update text.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="text-3D.html">
+<img src="images/demo/text-3D.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="text-3D.html">Text (3D)</a></td></tr>
+<tr><td class="demo-text">
+	Displaying text as a 3D geometric object (with thickness), using the <a href="https://github.com/supermedium/superframe/tree/master/components/text-geometry">text geometry component</a>. Example updates text once per second.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="keyboard.html">
+<img src="images/demo/keyboard.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="keyboard.html">Keyboard Component</a></td></tr>
+<tr><td class="demo-text">
+	Using the <a href="https://github.com/supermedium/aframe-super-keyboard">keyboard component</a>. Enter the name of a color and press enter to change the color of the sphere.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="animation.html">
+<img src="images/demo/animation.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="animation.html">Animation</a></td></tr>
+<tr><td class="demo-text">
+	<a href="https://aframe.io/docs/1.0.0/components/animation.html">Animations</a> added to geometric objects from the basic scene example. Animated properties include position, rotation, scale, color, and opacity. Contains examples with simultaneous animations (sphere changes radius and color) and sequential animations (box changes scale, then opacity) using the <a href="https://github.com/supermedium/superframe/tree/master/components/animation-timeline">timeline component</a>.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="particles.html">
+<img src="images/demo/particles.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="particles.html">Particle Effects</a></td></tr>
+<tr><td class="demo-text">
+	A selection of particle effects (fountain, fireball, clouds, fireworks, etc.) created using the <a href="https://github.com/harlyq/aframe-spe-particles-component">SPE particles component</a>, the most feature-complete wrapper for the <a href="http://squarefeet.github.io/ShaderParticleEngine/">Shader Particle Engine</a> known at this time. Visit <a href="https://github.com/harlyq/aframe-spe-particles-component">here</a> for even more examples and documentation.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="fireworks.html">
+<img src="images/demo/fireworks.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="fireworks.html">Fireworks</a></td></tr>
+<tr><td class="demo-text">
+	A fireworks display, complete with sound effects. Uses fade-in (required user interaction to enable sounds), spritesheet-animation component, and SPE particles component.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="curves-tubes.html">
+<img src="images/demo/curves-tubes.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="curves-tubes.html">Parametric Curves and Tubes</a></td></tr>
+<tr><td class="demo-text">
+	Introducing new components: aframe-curve-component, aframe-curve-geometry, and aframe-tube-geometry, that create geometric objects from a set of parametric equations <i>x(t)</i>, <i>y(t)</i>, <i>z(t)</i>. Uses the mathematical expression evaluator <a href="https://github.com/silentmatt/expr-eval">expr-eval</a> to parse strings as mathematical functions.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="parametric-path-follow.html">
+<img src="images/demo/parametric-path-follow.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="parametric-path-follow.html">Parametric Path Following</a></td></tr>
+<tr><td class="demo-text">
+	Introducing a new component, aframe-curve-follow, that moves an entity according to a set of parametric equations <i>x(t)</i>, <i>y(t)</i>, <i>z(t)</i>, adjusting position and rotation over a specified time interval. <br/>
+	start/stop movement with <span class="code">setAttribute("curve-follow", "enabled", "true")</span> (or "false") <br/>
+	reverse/normal movement with <span class="code">setAttribute("curve-follow", "reverse", "true")</span> (or "false")
+
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="physics.html">
+<img src="images/demo/physics.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="physics.html">Physics</a></td></tr>
+<tr><td class="demo-text">
+	Adding basic physics to a scene using the <a href="https://github.com/donmccurdy/aframe-physics-system">physics system component</a>.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="model.html">
+<img src="images/demo/model.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="model.html">Model</a></td></tr>
+<tr><td class="demo-text">
+	A scene containing (GLTF) models of trees (from <a href="https://poly.google.com">Poly by Google</a>), and an animated (GLB) model using the <a href="https://github.com/donmccurdy/aframe-extras/tree/master/src/loaders#animation">animation-mixer</a> component.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="spritesheet.html">
+<img src="images/demo/spritesheet.gif" class="demo-image"/></a></td>
+<td class="demo-title"><a href="spritesheet.html">Animated Spritesheet</a></td></tr>
+<tr><td class="demo-text">
+	Introducing a new component that uses a spritesheet as an animated texture.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="sprites.html">
+<img src="images/demo/sprites.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="sprites.html">Sprites</a></td></tr>
+<tr><td class="demo-text">
+	Illustrating the creation of sprite-like objects: images that always face the camera. Uses the
+	<a href="https://github.com/supermedium/superframe/tree/master/components/look-at">look-at component</a>, and the <a href="https://github.com/supermedium/superframe/tree/master/components/render-order">render-order component</a> to address (most) issues with overlapping transparency. Applications in example include simulated glow effect and text labels.
+	Also demonstrates integration with spritesheet-animation component.
+</td></tr>
+</table>
+
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="canvas-texture.html">
+<img src="images/demo/canvas-texture.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="canvas-texture.html">Canvas Texture</a></td></tr>
+<tr><td class="demo-text">
+	An HTML canvas element is used as the texture of a plane. The canvas is updated (redrawn) in the tick function of a component, created an animated effect.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="conway-game-of-life.html">
+<img src="images/demo/conway-game-of-life.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="conway-game-of-life.html">Conway's Game of Life - Texture</a></td></tr>
+<tr><td class="demo-text">
+	Conway's Game of Life played on a torus, rotating in space.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="video-texture.html">
+<img src="images/demo/video-texture.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="video-texture.html">Video Texture</a></td></tr>
+<tr><td class="demo-text">
+	A video is used as the texture of a plane. <br/>With a VR headset, pointing at and clicking on video activates pause and play functionality.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="portal-default.html">
+<img src="images/demo/portals.jpg" class="demo-image"/></a></td>
+<td class="demo-title"><a href="portal-default.html">Link Navigation</a></td></tr>
+<tr><td class="demo-text">
+	Demonstrates portal-like navigation between A-Frame scenes using the <a href="https://github.com/aframevr/aframe/blob/master/examples/showcase/link-traversal/js/components/link-controls.js">link controls component</a>.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="laser-controls.html">
+<img src="images/demo/laser-controls.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="laser-controls.html">Laser Controls</a></td></tr>
+<tr><td class="demo-text">
+	Requires VR headset (only tested with Oculus Go). Can point a laser at a cube; cube changes color when pointed at, when clicked on, and when no longer pointed at. (Corresponds to mouseenter, mousedown, mouseleave events.)
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="gamepad-emulation.html">
+<img src="images/demo/gamepad-emulation.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="gamepad-emulation.html">Gamepad Emulation (Oculus Go)</a></td></tr>
+<tr><td class="demo-text">
+	Requires Oculus Go headset. The trackpad and trigger on the Oculus Go controller are used to simulate an analog joystick and button of a standard gamepad controller. Controller state data is stored in a component, and displayed on a text element.
+</td></tr>
+</table>
+
+<table class="demo-table">
+<tr><td rowspan="2"><a href="virtual-arcade.html">
+<img src="images/demo/virtual-arcade.png" class="demo-image"/></a></td>
+<td class="demo-title"><a href="virtual-arcade.html">Virtual Arcade</a></td></tr>
+<tr><td class="demo-text">
+	Builds upon the previous examples. A hidden canvas contains a game (Starfish Collector) created using the <a class="toc" href="http://phaser.io/">Phaser</a> game framework. The game is used as a canvas texture in the A-Frame scene, positioned directly in front of a model of an arcade cabinet. 
+<br/>If using a regular computer, the keyboard can be used: W/A/S/D to move the camera, Arrow Keys to control the game. 
+<br/>If using the Oculus Go, the trackpad on the controller can be used to control the game.
+</td></tr>
+</table>
+
+
+</body>
+</html>
