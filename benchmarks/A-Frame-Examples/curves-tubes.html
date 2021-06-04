@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>A-Frame - Parameterized Paths</title>
+	<link rel="icon" href="data:;base64,=">
+	<script src="js/aframe-master.1.0.4.min.js"></script>
+	<script src="js/aframe-environment-component.min.js"></script>
+	<script src="js/extended-wasd-controls.js"></script>
+	<script src="js/parser.js"></script>
+	<script src="js/aframe-parametric-curve.js"></script>
+	<script src="js/aframe-curve-geometry.js"></script>
+	<script src="js/aframe-tube-geometry.js"></script>
+	
+</head>
+
+<body>
+
+<a-scene environment="preset: default; fog: 0;">
+	
+	<a-sphere
+		position="0 0 0" radius="0.1">
+	</a-sphere>
+	
+	<a-entity id="helix"
+		parametric-curve="xyzFunctions: cos(t), 0.02*t, sin(t); 
+			   		      tRange: 0, 200;">
+	</a-entity>
+
+	<a-entity id="trefoil"
+		parametric-curve="xyzFunctions: t^3 - 3*t, t^4 - 4*t^2, (t^5 - 10*t)/5; 
+			   			  tRange: -2.05, 2.05;">
+	</a-entity>
+
+	<a-entity 
+		curve-geometry="curveData: #helix; type: parametric-curve;
+					    totalPoints: 1000; lineColor: black;" 
+		position="-2 0 -5">
+	</a-entity>
+
+	<!--
+	<a-entity 
+		curve-geometry="curveData: #trefoil; type: parametric-curve;
+				        totalPoints: 500; lineColor: orange;"
+		position="2 2.1 -5" 
+		scale="0.5 0.5 0.5">
+	</a-entity>
+	-->
+
+	<a-entity 
+		tube-geometry="curveData: #trefoil; type: parametric-curve;
+					   tubeSegments: 100; radius: 0.1; tubeColor: orange;"  
+		position="2 2.1 -5" 
+		scale="0.5 0.5 0.5">
+	</a-entity>
+
+</a-scene>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>A-Frame - Laser Controls</title>
+	<script src="js/aframe-master.min.js"></script>
+	<script src="js/aframe-extras.min.js"></script>
+</head>
+
+<body>
+
+<script>
+
+AFRAME.registerComponent('mousey', {
+	
+	init: function()
+	{
+		let mesh = this.el.getObject3D("mesh");
+		
+		this.el.addEventListener("mouseenter", function(event)
+		{
+			mesh.material.color.set("red");
+		});
+		
+		this.el.addEventListener("mousedown", function(event)
+		{
+			mesh.material.color.set("yellow");
+		});
+
+		this.el.addEventListener("mouseleave", function(event)
+		{
+			mesh.material.color.set("blue");
+		});
+	}
+
+}); 
+
+AFRAME.registerComponent('pointer', {
+	
+	init: function()
+	{
+		let mesh = document.querySelector("#intersection-signal").getObject3D("mesh");
+		
+		this.el.addEventListener("raycaster-intersection", function(event)
+		{
+			this.setAttribute("line", "color", "#FFFFFF");
+			mesh.material.color.set("#CCCCCC");
+		});
+		
+		this.el.addEventListener("raycaster-intersection-cleared", function(event)
+		{
+			this.setAttribute("line", "color", "#CCCCCC");
+			mesh.material.color.set("#444444");
+		});
+	}
+	
+});
+
+
+</script>
+
+<a-scene antialias="true">
+	
+	<a-assets>
+		<img id="grid" src="images/border.png" crossorigin="anonymous" />
+		<img id="sky" src="images/stars.jpg" crossorigin="anonymous" />
+	</a-assets>
+
+	<a-sphere
+		id = "intersection-signal"
+		radius = "0.25"
+		position = "0.00 2 -3.00"
+		color = "#444444"
+		material = "src: #grid; repeat: 16 8;">
+	</a-sphere>
+		
+	<!-- in the a-entity tag below, add
+			movement-controls="speed: 0.1; fly: false;"
+		 to move the camera/laser-controls with the oculus go trackpad -->
+	<a-entity position="0 0 0">
+		<a-entity camera position="0 1.5 1" look-controls></a-entity>
+		<a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .collidable; far: 5;" line="color: #CCCCCC" pointer></a-entity>
+		<a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .collidable; far: 5;" line="color: #CCCCCC" pointer></a-entity>
+	</a-entity>
+	
+	<a-sky 
+		rotation = "0 0 0"
+		color = "#FFFFFF"
+		material = "src: #sky">
+	</a-sky>
+
+	<a-plane
+		width="100" height="100"
+		position=" 0.00 0.00 0.00" 
+		rotation="-90 0 0" 
+		color="#888888" 
+		material="src: #grid; repeat:100 100; transparent: true; opacity: 0.75"
+		shadow="cast: false; receive: true">
+	</a-plane>
+
+	<a-box
+		width = "1" height = "1" depth = "1"
+		position = "-2.0 0.5 -3.0"
+		color = "blue" 
+		material = "src: #grid"
+		class = "collidable"
+		mousey>
+	</a-box>
+	
+	<a-box
+		width = "1" height = "1" depth = "1"
+		position = "0.0 0.5 -3.0"
+		color = "blue" 
+		material = "src: #grid"
+		class = "collidable"
+		mousey>
+	</a-box>
+
+	<a-box
+		width = "1" height = "1" depth = "1"
+		position = "2.0 0.5 -3.0"
+		color = "blue" 
+		material = "src: #grid"
+		class = "collidable"
+		mousey>
+	</a-box>
+	
+	
+
+	
+</a-scene>
+</body>
+</html>

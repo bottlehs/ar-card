@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>A-Frame - 3D Text</title>
+	<script src="js/aframe-master.1.0.4.min.js"></script>
+	<script src="js/aframe-text-geometry-component.min.js"></script>
+</head>
+
+<body>
+
+<script>
+
+AFRAME.registerComponent('updater', {
+	
+	init: function()
+	{
+		// apply material to this.el.object3d
+	},
+
+	tick: function (time, timeDelta) 
+	{
+		let t = Math.round(time/1000);
+		let newText = "Seconds: " + t;
+		let currentText = this.el.getAttribute("text-geometry")["value"];
+
+		// only update if newText is different than current text displayed.
+		if (newText != currentText)
+		{
+			this.el.setAttribute("text-geometry", "value", newText)
+		}
+	}
+	
+});
+
+</script>
+
+<a-scene>
+	
+	<a-assets>
+		<img id="grid" src="images/border.png" />
+		<img id="sky" src="images/stars.jpg"  />
+		<img id="hexagons" src="images/hexagons.png" />
+		<a-asset-item id="customFont" src="fonts/helvetiker_regular.typeface.json"></a-asset-item>
+	</a-assets>
+
+	<a-sky 
+		rotation = "0 0 0"
+		color = "#FFFFFF"
+		material = "src: #sky">
+	</a-sky>
+	
+	<a-plane
+		width="100" height="100"
+		position=" 0.00 0.00 0.00" 
+		rotation="-90 0 0" 
+		color="#888888" 
+		material="src: #grid; repeat:100 100; transparent: true; opacity: 0.75"
+		shadow="cast: false; receive: true">
+	</a-plane>
+	
+	<-- 
+		uses the text-geometry component:
+	    https://github.com/supermedium/superframe/tree/master/components/text-geometry 
+	    see also:
+	    https://threejs.org/docs/#api/en/geometries/TextGeometry
+	    height: depth of text
+	-->
+	<a-entity 
+		id="textArea"
+		position="-1.5 2 -3" 
+		text-geometry="font: #customFont;  
+			size: 0.5; 
+			height: 0.1;
+			bevelEnabled: true;
+			bevelSize: 0.02;
+			bevelThickness: 0.02;
+			value: Seconds: ?"
+		material="color: #AAAAFF; src: #hexagons; repeat: 20 20;"
+		updater>
+	</a-entity>
+	
+</a-scene>
+</body>
+</html>
